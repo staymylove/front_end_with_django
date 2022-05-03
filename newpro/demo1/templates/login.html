@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'CSS/login.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div class="login-form">
+      <div class="logo"><img style="height: 100px" src="{% static 'images/logo.png' %}" alt=""></div>
+      <div class="social-media">
+        <button class="fb"><img src="{% static 'images/phone.png' %}" alt=""></button>
+        <button class="google"><img src="{% static 'images/qq.png' %}" alt=""></button>
+        <button class="xbox"><img src="{% static 'images/微信.png' %}" alt=""></button>
+
+      </div>
+
+      <h6>登录</h6>
+
+      <form action="/demo1/index/" method="post">
+        {% csrf_token %}
+        <div class="textbox">
+          <input type="text" name="user" placeholder="用户名或密码">
+          <span class="check-message hidden">Required</span>
+        </div>
+
+        <div class="textbox">
+          <input type="password" name="pwd" placeholder="密码">
+          <span class="check-message hidden">Required</span>
+        </div>
+
+        <div class="options">
+          <label class="remember-me">
+            <span class="checkbox">
+              <input type="checkbox">
+              <span class="checked"></span>
+            </span>
+            记住密码
+          </label>
+
+          <a href="#">忘记密码</a>
+        </div>
+
+        <input type="submit" value="一键登录" class="login-btn" disabled>
+        <div class="privacy-link">
+          <a href="#">隐私政策</a>
+        </div>
+      </form>
+
+      <div class="dont-have-account">
+        加入记忆宫殿，永久保留逝者记忆
+        <a href="./register/">注册</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(".textbox input").focusout(function(){
+        if($(this).val() == ""){
+          $(this).siblings().removeClass("hidden");
+          $(this).css("background","#554343");
+        }else{
+          $(this).siblings().addClass("hidden");
+          $(this).css("background","#484848");
+        }
+      });
+
+      $(".textbox input").keyup(function(){
+        var inputs = $(".textbox input");
+        if(inputs[0].value != "" && inputs[1].value){
+          $(".login-btn").attr("disabled",false);
+          $(".login-btn").addClass("active");
+        }else{
+          $(".login-btn").attr("disabled",true);
+          $(".login-btn").removeClass("active");
+        }
+      });
+    </script>
+  </body>
+</html>

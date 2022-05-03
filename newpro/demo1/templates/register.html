@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+	<link rel="stylesheet" href="{%static 'CSS/register.css'%}">
+</head>
+<body>
+
+<form action="#" method="post">
+	<div class="login-form">
+		<div class="textbox">
+<table border="1" width="500" align="center" class="tt">
+	<div class="logo"><img style="height: 100px" src="{%static 'images/logo.png'%}" alt=""></div>
+
+    <caption class="headl">登入注册</caption>
+    <tr>
+        <td class="word"><label for="username">账号(用户名)</label></td>
+        <td><input type="text" name="username" placeholder="请输入用户名" id="username"></td>
+    </tr>
+    <tr>
+        <td class="word"><label for="password">密码</label></td>
+        <td><input type="text" name="password" placeholder="请输入密码" id="password"></td>
+    </tr>
+    <tr>
+        <td class="word"><label for="Email">Email</label></td>
+        <td><input type="text" name="username" placeholder="请输入Email" id="Email"></td>
+    </tr>
+    <!-- <tr>
+        <td><label for="name">姓名</label></td>
+        <td><input type="text" name="username" placeholder="请输入姓名" id="name"></td>
+    </tr>
+    <tr>
+        <td><label for="phonenumber">手机号</label></td>
+        <td><input type="text" name="username" placeholder="请输入手机号" id="phonenumber"></td>
+    </tr>
+    <tr>
+        <td>性别</td>
+        <td>
+            <input type="radio" name="gender" value="male">男
+            <input type="radio" name="gender" value="female">女
+        </td>
+    </tr>
+
+    <tr>
+       <td>出生日期</td>
+        <td><input type="date" name="birthday"> </td>
+    </tr>
+    <tr>
+        <td>验证码</td>
+        <td>
+            <input type="text" name="text" placeholder="请输入验证码">
+            <img src="img/1.jpg">
+
+        </td>
+    </tr> -->
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" value="注册">
+        </td>
+
+
+    </tr>
+
+</table>
+			</div>
+		</div>
+</form>
+ 
+</body>
+</html>

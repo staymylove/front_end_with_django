@@ -1,0 +1,54 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>dataVis</title>
+</head>
+
+<body background="{% static 'images/bg.png'%}">
+	 <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="{% static 'images/logo.png'%}" alt="" class="nav__logo-img">
+                    记忆宫殿
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">首页</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">信息登记</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#trick" class="nav__link">记忆宫殿</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#new" class="nav__link">云扫墓</a>
+                        </li>
+
+                        <a href="#" class="button button--ghost">咨询我们</a>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <img src="assets/img/nav-img.png" alt="" class="nav__img">
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+
+            </nav>
+        </header>
+	
+</body>
+</html>
